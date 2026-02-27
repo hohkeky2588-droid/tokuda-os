@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>徳田OS診断</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>徳田OS診断</h1>
+    <p>あなたの思考タイプを診断します</p>
+
+    <div id="quiz">
+
+        <p>Q1. 努力しても結果が出ないと感じる</p>
+        <button onclick="answer(1)">YES</button>
+        <button onclick="answer(0)">NO</button>
+
+        <p>Q2. 能力より仕組みが重要だと思う</p>
+        <button onclick="answer(1)">YES</button>
+        <button onclick="answer(0)">NO</button>
+
+        <p>Q3. 人生は構造で決まると思う</p>
+        <button onclick="answer(1)">YES</button>
+        <button onclick="answer(0)">NO</button>
+
+        <p>Q4. AIを使いこなしたい</p>
+        <button onclick="answer(1)">YES</button>
+        <button onclick="answer(0)">NO</button>
+
+        <p>Q5. 自動運転人生に興味がある</p>
+        <button onclick="answer(1)">YES</button>
+        <button onclick="answer(0)">NO</button>
+
+    </div>
+
+    <br>
+
+    <button onclick="showResult()">結果を見る</button>
+
+    <div id="result"></div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
