@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>徳田診断OS｜診断結果</title>
+
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            padding: 40px;
+            background: #f5f5f5;
+        }
+
+        .box {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        a.button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 25px;
+            background: black;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>徳田診断OS 診断結果</h1>
+
+        <p id="resultText"></p>
+
+        <hr>
+
+        <p>
+            この診断はまだ公開初期です。<br>
+            今見つけたあなたは<strong>初期発見者</strong>です。
+        </p>
+
+        <p>
+            同じ思考タイプの研究を公開しています。
+        </p>
+
+        <a class="button" href="https://x.com/bJ1JL7JM6x77440" target="_blank">
+            Xはこちら
+        </a>
+
+        <br><br>
+
+        <a class="button" href="https://note.com/keen_eel8666" target="_blank">
+            続き（note）
+        </a>
+
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const type = params.get("type");
+
+        let text = "診断結果が取得できませんでした。";
+
+        if (type === "awake") {
+            text = "【構造覚醒型】あなたは徳田OS適合者です。";
+        }
+        else if (type === "shift") {
+            text = "【転換期型】能力思考から構造思考へ移行中です。";
+        }
+        else if (type === "old") {
+            text = "【努力依存型】まだ旧OSで動いています。";
+        }
+
+        document.getElementById("resultText").innerHTML = text;
+
+        /* 🔥 自動X投稿 */
+        const share =
+            `徳田OS診断を受けました。
+
+結果：
+${text}
+
+あなたの思考OSは？
+
+https://hohkeky2588-droid.github.io/tokuda-os/
+
+#徳田OS`;
+
+        window.open(
+            "https://twitter.com/intent/tweet?text=" +
+            encodeURIComponent(share),
+            "_blank"
+        );
+    </script>
+
+</body>
+
+</html>
